@@ -42,33 +42,7 @@ userRouter.post("/signup",async(req,res)=>{
 })
 
  userRouter.post("/login",async(req,res)=>
-//  {
-    
-//     try {
-//         const {email,password}=req.body;
-//         const isuserpresent=await userModel.findOne({email});
- 
-//         if(!isuserpresent){
-//             return res.send({msg:"user not present in db , please register first"});
-//         }
-//         const correctpassword= await bcrypt.compareSync(password,isuserpresent.password);
-//         if(!correctpassword){
-//             return res.send({msg:"invalid credentials"})
-//         }
 
-//         const token= await jwt.sign({email,userid:isuserpresent._id,role:isuserpresent.role},process.env.token_key,{expiresIn:"30m"})
-//         const refreshtoken= await jwt.sign({email,userid:isuserpresent._id,role:isuserpresent.role},process.env.ref_token_key,{expiresIn:"1h"})
-//         console.log(isuserpresent)
-//         if(isuserpresent.role=="admin"){
-//             res.json({msg:"Login successful",token,refreshtoken,role:"admin"})
-//             return
-//         }
-//         res.json({msg:"Login successful",token,refreshtoken})
-//     } catch (error) {
-//         console.log(error)
-//         res.json({msg:"something went wrong",error})    
-//     } 
-// }
 
 {
     try {
