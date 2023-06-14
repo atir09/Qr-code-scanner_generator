@@ -19,28 +19,30 @@
     <header class="header">
 
         <a href="../index.html" class="logo"> <img style="width: 3.8rem;" src="./Images/qrlogo2.webp" alt="">
-          <h3><p>QRcode </p> <span >chimp</span></h3>
+            <h3>
+                <p>QRcode </p> <span>chimp</span>
+            </h3>
         </a>
-    
+
         <div id="menu-btn" class="fas fa-bars"></div>
-    
+
         <nav class="navbar">
-    
-          <a href="./qrurl.html">
-            Create URL Qr-Code
-          </a>
-          <a href="./qrtxt.html">
-            Create Text Code
-          </a>
-          <a href="./scaner.html">
-            Scan Qr-Code
-          </a>
-          <a id="user_name">User</a>
-          <a href="" onclick="logoutFun()" id="logout">Log out</a>
+
+            <a href="./qrurl.html">
+                Create URL Qr-Code
+            </a>
+            <a href="./qrtxt.html">
+                Create Text Code
+            </a>
+            <a href="./scaner.html">
+                Scan Qr-Code
+            </a>
+            <a id="user_name">User</a>
+            <a href="" onclick="logoutFun()" id="logout">Log out</a>
         </nav>
         </nav>
-    
-      </header>
+
+    </header>
     <!-- ......................................................................................................................................................... -->
 
     <div style="text-align: center;margin-top: 80px;">
@@ -61,7 +63,6 @@
             text-align: center;
             font-size: 1.5rem;
         }
-
     </style>
 
     <main>
@@ -108,58 +109,65 @@
 
 
 
-        
-
-// .......................................Navbar........................................................
 
 
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .navbar');
-
-menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-};
-
-window.onscroll = () => {
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-};
-
-// ............................................................................................................
-
-    let user=document.getElementById("user_name")
-    const logout = document.querySelector("#logout")
+        // .......................................Navbar........................................................
 
 
-    let token = localStorage.getItem("token")
-    let refreshToken = localStorage.getItem("refreshToken")
-    let name = localStorage.getItem("name")
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.header .navbar');
 
-    CheckLoggedIn()
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        };
 
-    function CheckLoggedIn() {
-        if(token && refreshToken && name){
-            user.style.display="inline-block"
-            user.innerText=name
-            logout.style.display="inline-block"
-        }else{
-            user.style.display="none"
-            logout.style.display="none"
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        };
+
+        // ............................................................................................................
+
+        let user = document.getElementById("user_name")
+        const logout = document.querySelector("#logout")
+
+
+        let token = localStorage.getItem("token")
+        let refreshToken = localStorage.getItem("refreshToken")
+        let name = localStorage.getItem("name")
+
+        CheckLoggedIn()
+
+        function CheckLoggedIn() {
+            if (token && refreshToken && name) {
+                user.style.display = "inline-block"
+                user.innerText = name
+                logout.style.display = "inline-block"
+            } else {
+                user.style.display = "none"
+                logout.style.display = "none"
+                window.location = "../index.html"
+            }
+
         }
 
-    }
+
+        // ........................................Logout Function..................................................
 
 
-// ........................................Logout Function..................................................
+        function logoutFun() {
+            var result = confirm("Do you really want to Sign Out!")
+            if (result == true) {
+                localStorage.clear()
+                window.location.reload()
+            }
+            
+        }
 
-
-function logoutFun(){
-    localStorage.clear()
-    window.location.href="../index.html"
-}
-    
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
 
 </body>
 

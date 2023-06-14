@@ -46,7 +46,14 @@ const SignUp = () => {
     })
     .then((data) => {
       console.log(data)
-      alert(data.res.msg)
+      if(data.res.msg=="New user has been registered"){
+        swal({ text: "New user has been registered, Plz Sign In", icon: "success", button: "ok", timer: 2000 })
+      }else if(data.res.msg="User already exists"){
+        swal({ text: "User already exists, Plz Sign In", icon: "success", button: "ok", timer: 2000 })
+      }else{
+        swal({ text: "Server not responding", icon: "error", button: "ok", timer: 2000 })
+      }
+      // alert(data.res.msg)
     })
     .catch((err) => {
       console.log(err)
@@ -81,7 +88,8 @@ signinForm.addEventListener("submit", (e) => {
         localStorage.setItem("token", data.res.token)
         localStorage.setItem("refreshToken", data.res.refreshToken)
         localStorage.setItem("name", data.res.name)
-        alert(data.res.msg)
+        swal({ text: "Login Successful", icon: "success", button: "ok", timer: 2000 })
+        // alert(data.res.msg)
 
         if (data.res.role == "admin") {
           window.location = "./admin.html"
@@ -91,11 +99,13 @@ signinForm.addEventListener("submit", (e) => {
         }
       }else{
         loader.style.display="none"
-        window.location.reload()
+        swal({ text: "Invalid Username or Password", icon: "error", button: "ok", timer: 2000 })
+        // window.location.reload()
       }
     })
     .catch((err )=> {
       loader.style.display="none"
+      swal({ text: "Server not responding", icon: "error", button: "ok", timer: 2000 })
       console.log(err)
     })
 

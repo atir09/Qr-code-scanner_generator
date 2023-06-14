@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR-Bot landing page</title>
+    <title>QR-chimp landing page</title>
     <link rel="stylesheet" href="Frontend/styles/style.css">
     <script src="https://kit.fontawesome.com/d68d319f71.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/5a8be6b3e6.js" crossorigin="anonymous"></script>
 
 
-    
+
 </head>
 
 <body>
@@ -27,9 +27,9 @@
         <div id="menu-btn" class="fas fa-bars"></div>
 
         <nav class="navbar">
-            
+
             <a onclick="URLCode()">
-              Create URL Qr-Code 
+                Create URL Qr-Code
             </a>
             <a onclick="TextCode()">
                 Create Text Code
@@ -44,18 +44,17 @@
         </nav>
 
     </header>
-    
+
     <div id="div1">
         <div id="d1l">
             <h1>Create custom QR codes for free with our generator.</h1>
             <p>Simply input your information and download the
                 high-resolution code for easy sharing and tracking</p>
-            <a href="Frontend/qrurl.html"><button id="qr_gen">Create your QR code now</button>
+            <a onclick="URLCode()"><button id="qr_gen">Create your QR code now</button>
             </a>
         </div>
         <div id="d1r">
-            <img src="./Frontend/Images/landing-page-pic.jpg"
-                alt="">
+            <img src="./Frontend/Images/landing-page-pic.jpg" alt="">
         </div>
     </div>
     <div id="div2">
@@ -146,11 +145,13 @@
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
 <script>
     console.log("Script Working")
 
-    let login=document.getElementById("signin")
-    let user=document.getElementById("user_name")
+    let login = document.getElementById("signin")
+    let user = document.getElementById("user_name")
     const logout = document.querySelector("#logout")
 
 
@@ -162,49 +163,51 @@
     CheckLoggedIn()
 
     function CheckLoggedIn() {
-        if(token && refreshToken && name){
-            login.style.display="none"
-            user.style.display="inline-block"
-            user.innerText=name
-            logout.style.display="inline-block"
-        }else{
-            login.style.display="inline-block"
-            user.style.display="none"
-            logout.style.display="none"
+        if (token && refreshToken && name) {
+            login.style.display = "none"
+            user.style.display = "inline-block"
+            user.innerText = name
+            logout.style.display = "inline-block"
+        } else {
+            login.style.display = "inline-block"
+            user.style.display = "none"
+            logout.style.display = "none"
         }
 
     }
 
 
 
-    function URLCode(){
-        if(token && refreshToken && name){
-            window.location="Frontend/qrurl.html"
-        }else{
-            alert("Please Log In First")
+    function URLCode() {
+        if (token && refreshToken && name) {
+            window.location = "Frontend/qrurl.html"
+        } else {
+            swal({ text: "Please Log In First", icon: "error", button: "ok", timer: 2000 })
+            // alert("Please Log In First")
         }
     }
 
-    function TextCode(){
-        if(token && refreshToken && name){
-            window.location="Frontend/qrtxt.html"
-        }else{
-            alert("Please Log In First")
+    function TextCode() {
+        if (token && refreshToken && name) {
+            window.location = "Frontend/qrtxt.html"
+        } else {
+            swal({ text: "Please Log In First", icon: "error", button: "ok", timer: 2000 })
         }
     }
 
-    function Scan(){
-        if(token && refreshToken && name){
-            window.location="Frontend/scaner.html"
-        }else{
-            alert("Please Log In First")
+    function Scan() {
+        if (token && refreshToken && name) {
+            window.location = "Frontend/scaner.html"
+        } else {
+            swal({ text: "Please Log In First", icon: "error", button: "ok", timer: 2000 })
+            // alert("Please Log In First")
         }
     }
 
-     // .......................................Navbar........................................................
+    // .......................................Navbar........................................................
 
 
-     let menu = document.querySelector('#menu-btn');
+    let menu = document.querySelector('#menu-btn');
     let navbar = document.querySelector('.header .navbar');
 
     menu.onclick = () => {
@@ -222,9 +225,12 @@
 
     // ........................................Logout Function..................................................
 
-    function logoutFun(){
-        localStorage.clear()
-        window.location.reload()
+    function logoutFun() {
+        var result = confirm("Do you really want to Sign Out!")
+        if (result == true) {
+            localStorage.clear()
+            window.location = ".././index.html"
+        }
     }
 
 </script>

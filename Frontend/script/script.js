@@ -12,7 +12,8 @@ const onGenerateSubmit = (e) => {
 
   // Validate url
   if (url === '') {
-    alert('Please enter a URL');
+    swal({ text: "Please enter a URL", icon: "error", button: "ok", timer: 2000 })
+    // alert('Please enter a URL');
   } else {
     showSpinner();
     // Show spinner for 1 sec
@@ -86,46 +87,50 @@ let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
 
 menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
 };
 
 window.onscroll = () => {
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
 };
 
 // ............................................................................................................
 
-    let user=document.getElementById("user_name")
-    const logout = document.querySelector("#logout")
+let user = document.getElementById("user_name")
+const logout = document.querySelector("#logout")
 
 
 
-    let token = localStorage.getItem("token")
-    let refreshToken = localStorage.getItem("refreshToken")
-    let name = localStorage.getItem("name")
+let token = localStorage.getItem("token")
+let refreshToken = localStorage.getItem("refreshToken")
+let name = localStorage.getItem("name")
 
-    CheckLoggedIn()
+CheckLoggedIn()
 
-    function CheckLoggedIn() {
-        if(token && refreshToken && name){
-            user.style.display="inline-block"
-            user.innerText=name
-            logout.style.display="inline-block"
-        }else{
-            user.style.display="none"
-            logout.style.display="none"
-        }
+function CheckLoggedIn() {
+  if (token && refreshToken && name) {
+    user.style.display = "inline-block"
+    user.innerText = name
+    logout.style.display = "inline-block"
+  } else {
+    user.style.display = "none"
+    logout.style.display = "none"
+    window.location=".././index.html"
+  }
 
-    }
+}
 
 
 // ........................................Logout Function..................................................
 
-function logoutFun(){
+function logoutFun() {
+  var result=confirm("Do you really want to Sign Out!")
+  if(result==true){
     localStorage.clear()
-    window.location.href="../index.html"
+      window.location.reload()
+  }
 }
 
 
