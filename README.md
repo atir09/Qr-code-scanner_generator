@@ -117,15 +117,6 @@ npx nodemon index.js
 ```javascript
 GET  /
 ```
-  #### Registration
-```javascript
-POST  /user/register
-```
-  #### Signin
-```javascript
-POST  /user/logout
-POST  /auth/google
-```
 
  #### User 
 ```javascript
@@ -138,11 +129,6 @@ POST  /auth/google
     admin//userlist
     admin//deleteUser/:id
     admin/logs
- Credentials: 
- admin@gmail.com
- admin
- GET /admin/
- GET /admin/all
  ```
     
    
@@ -158,33 +144,33 @@ POST  /auth/google
     
   <h1>1.  Home Page  </h1><br><br>
   
-![Home 1](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-1.jpg)
+![Home 1](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-1.png)
 
-  ![home 2](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-2.jpg)
+  ![home 2](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-2.png)
 
   
 
   <h1>2. Login  </h1>
   <br><br>
   
-  ![login](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/login.jpg)
+  ![login](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/login.png)
   
   <h1>3. Signup  </h1>
   <br><br>
   
-  ![signup](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/signup.jpg)
+  ![signup](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/signup.png)
   
   <h1>4. QR Code Generator  </h1>
   <br><br>
   
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/Url.jpg)
+  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/Url.png)
 
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/text.jpg)
+  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/text.png)
 
   <h1>5. QR Code Scanner  </h1>
   <br><br>
   
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/scanner.jpg)
+  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/scanner.png)
   
   <h1>6. Admin  </h1>
   <br><br>
