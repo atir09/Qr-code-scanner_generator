@@ -194,7 +194,7 @@ GET  /
 | :----: | 
    
 
-[FRONTEND](https://go-fit.netlify.app/)
+[FRONTEND](https://go-fit.netlify.app/](https://qr-code-scanner-generator.netlify.app/)
 
 [BACKEND](https://rich-plum-barracuda-fez.cyclic.app/)
 
