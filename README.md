@@ -144,33 +144,35 @@ GET  /
     
   <h1>1.  Home Page  </h1><br><br>
   
-![Home 1](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-1.png)
+![Home 1](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/home-1.png)
 
-  ![home 2](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/home-2.png)
+  ![home 2](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/home-2.png)
 
   
 
   <h1>2. Login  </h1>
   <br><br>
   
-  ![login](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/login.png)
+  ![login](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/login.png)
   
   <h1>3. Signup  </h1>
   <br><br>
   
-  ![signup](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/signup.png)
+  ![signup](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/signup.png)
   
-  <h1>4. QR Code Generator  </h1>
+  <h1>4. Url ==> QR Code Generator  </h1>
   <br><br>
   
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/Url.png)
+  ![image](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/Url.png)
 
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/text.png)
+ <h1>4. Text ==> QR Code Generator  </h1>
+  <br><br>
+  ![image](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/text.png)
 
   <h1>5. QR Code Scanner  </h1>
   <br><br>
   
-  ![image](https://github.com/adityagithubraj/-direful-order-8525/blob/main/Frontend/Images/scanner.png)
+  ![image](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/scanner.png)
   
   <h1>6. Admin  </h1>
   <br><br>
