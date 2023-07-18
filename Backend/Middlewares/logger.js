@@ -11,7 +11,7 @@ const logger = expressWinston.logger({
         // }),
         new winston.transports.MongoDB({
             level: "info",
-            db: process.env.MongoURL,
+            db: process.env.mongoURL,
             options: {
                 useUnifiedTopology: true
             },
