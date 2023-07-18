@@ -167,6 +167,7 @@ GET  /
 
  <h1>4. Text ==> QR Code Generator  </h1>
   <br><br>
+  
   ![image](https://github.com/atir09/Qr-code-scanner_generator/blob/main/Frontend/Images/text.png)
 
   <h1>5. QR Code Scanner  </h1>
@@ -193,7 +194,7 @@ GET  /
 | :----: | 
    
 
-[FRONTEND](https://go-fit.netlify.app/)
+[FRONTEND](https://qr-code-scanner-generator.netlify.app/)
 
 [BACKEND](https://rich-plum-barracuda-fez.cyclic.app/)
 
