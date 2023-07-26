@@ -196,7 +196,7 @@ GET  /
 
 [FRONTEND](https://qr-code-scanner-generator.netlify.app/)
 
-[BACKEND](https://rich-plum-barracuda-fez.cyclic.app/)
+[BACKEND](https://sore-cyan-cormorant-sock.cyclic.app/)
 
  
 | `Author` |
